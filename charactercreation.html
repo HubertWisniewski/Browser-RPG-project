@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Character Creation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="charactercreation.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="charboard">
+                <div class="elements-list" id="slider1">
+                        <article class="element">
+                                <h2 class="element-title">
+                                    Clockwork
+                                </h2>
+                                <div class="element-text">
+                                    <img src="img/clockwork.png"/>
+                                </div>
+                            </article>
+                            <article class="element">
+                                <h2 class="element-title">
+                                    Stomper
+                                </h2>
+                                <div class="element-text">
+                                    <img src="img/stomper.png"/>
+                                </div>
+                            </article>
+                            <article class="element">
+                                    <h2 class="element-title">
+                                       Prophet 
+                                    </h2>
+                                    <div class="element-text">
+                                        <img src="img/prophet.png"/>
+                                    </div>
+                                </article>
+                    </div>
+        </div>
+        <form id="character-choice">
+            <input type="text" id='classname' required/>
+        </form>
+        <button class='submit' form='character-choice'>Login</button>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRx5CHEq8H81g4ZwYvcJdj_wQ-p_g-pm4",
+        authDomain: "rpgame-d28da.firebaseapp.com",
+        databaseURL: "https://rpgame-d28da.firebaseio.com",
+        projectId: "rpgame-d28da",
+        storageBucket: "",
+        messagingSenderId: "1060516623368",
+        appId: "1:1060516623368:web:bbfdeb2686a84554"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // Auth and firestore refs
+      const auth = firebase.auth();
+      const database = firebase.database();
+
+    </script>
+    <script src="scripts/items.js"></script>
+    <script src="scripts/slider.js"></script>
+    <script src="scripts/character.js"></script>
+</body>
+</html>

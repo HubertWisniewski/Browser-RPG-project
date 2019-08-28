@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Introde</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+     
+      <div class="register" id="mainform">
+          <!-- <h2>Authentication</h2> -->
+          <form id="signup-form" method="post" name="myform">
+          <input type="email" id="signup-email" placeholder="Email" required/>
+          <input type="username" id='signup-username' placeholder="Username" required/>
+          <input type="password" id="signup-password" placeholder="Password" required/>
+          <button class='submit'>Register</button>
+          <a href="#" class="changeform">Login</a>
+          </form>
+          </div>
+
+
+      <div class="login">
+        <!-- <h2>Authentication</h2> -->
+        <form id="signin-form" method="post" name="loginform">
+        <input type="email" id="signin-email" placeholder="Email" required/>
+        <input type="password" id="signin-password" placeholder="Password" required/>
+        <button class='submit'>Login</button>
+        <a class="changeregisterform" href="#">Don't have an account?</a>
+        </form>
+        
+        </div>
+
+
+          <!-- <div class="container">
+              <form id="signup-form" method="post" class="login">
+                <h1>Simple Login</h1>
+                <input type="username" id="signup-username" placeholder="Username"/>
+                <input type="email" id="signup-email" placeholder="Email" required/>
+                <br/><input type="password" id='signup-password' placeholder="Password" required/>
+                <input id="submitbutton" type="submit" value="Login"/>
+                <br />
+                <div class="links">
+                  <a id="signupmode" href="#">create account</a>
+                  <a href="#">forgot password?</a> 
+                </div>
+                
+                <br /><br />
+              </form>
+            </div> -->
+
+ 
+        </div>
+
+        
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script> -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDRx5CHEq8H81g4ZwYvcJdj_wQ-p_g-pm4",
+        authDomain: "rpgame-d28da.firebaseapp.com",
+        databaseURL: "https://rpgame-d28da.firebaseio.com",
+        projectId: "rpgame-d28da",
+        storageBucket: "",
+        messagingSenderId: "1060516623368",
+        appId: "1:1060516623368:web:bbfdeb2686a84554"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // Auth and firestore refs
+      const auth = firebase.auth();
+      // const db = firebase.firestore();
+      const database = firebase.database();
+
+    </script>
+      <script src="scripts/formanimation.js"></script>
+     <script src="scripts/main.js"></script>
+     <script src="scripts/auth.js"></script>
+  </body>
+</html>

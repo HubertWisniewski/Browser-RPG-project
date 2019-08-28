@@ -1,0 +1,427 @@
+@font-face {
+    font-family: "Future";
+    src: url("img/Cataclysmo.otf");
+    }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Future';
+    overflow: hidden;
+}
+
+.wrapper {
+    background: url('img/sean-foley-vjVStBBqDgU-unsplash.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+#playerHUD {
+    position: absolute;
+    z-index: 1002;
+    height: 6vh;
+    width: 20%;
+    display: flex;
+    background-color: antiquewhite;
+    border-bottom-right-radius: 10vh;
+}
+
+#opponentHUD {
+    position: absolute;
+    z-index: 1002;
+    right: 0;
+    height: 6vh;
+    width: 20%;
+    display: flex;
+    background-color: antiquewhite;
+    border-bottom-left-radius: 10vh;
+}
+
+#opponentName-display {
+    /* position: absolute; */
+    text-align: center;
+    flex: 1 1 0;
+    padding: 1vh;
+    font-size: 5vh;
+    background-color: antiquewhite;
+}
+
+#opponentHp-display {
+    /* position: absolute; */
+    text-align: center;
+    flex: 1 1 0;
+    padding: 1vh;
+    font-size: 5vh;
+    background-color: antiquewhite;
+}
+
+#playerName-display {
+    /* position: absolute; */
+    text-align: center;
+    flex: 1 1 0;
+    padding: 1vh;
+    font-size: 5vh;
+    background-color: antiquewhite;
+}
+
+#playerHp-display {
+    /* position: absolute; */
+    text-align: center;
+    flex: 1 1 0;
+    padding: 1vh;
+    font-size: 5vh;
+    background-color: antiquewhite;
+}
+
+
+
+#yourHit {
+    position: absolute;
+    right: 15vw;
+    top: 30vh;
+    /* z-index: 1001; */
+    width: 15vh;
+    color: red;
+    padding: 3vh;
+    font-size: 7vh;
+    animation: hitanimation 3s;
+    display: none;
+    /* transition: all 3s ease-in; */
+}
+
+#opponentHit {
+    position: absolute;
+    left: 20vw;
+    top: 30vh;
+    /* z-index: 1001; */
+    width: 15vh;
+    color: red;
+    padding: 3vh;
+    font-size: 7vh;
+    animation: hitanimation 3s;
+    display: none;
+    /* transition: all 3s ease-in; */
+}
+
+#username-display {
+    /* position: absolute; */
+    text-align: center;
+    flex: 1 1 0;
+    padding: 1vh;
+    font-size: 5vh;
+    background-color: antiquewhite;
+}
+
+#level-display {
+    /* position: absolute; */
+    text-align: center;
+    flex: 1 1 0;
+    font-size: 5vh;     
+    background-color: antiquewhite;
+}
+
+#upperHUD {
+    position: absolute;
+    z-index: 100;
+    height: 6vh;
+    width: 50%;
+    display: flex;
+    background-color: rgb(9, 37, 45);
+    border-bottom-right-radius: 10vh;
+}
+
+
+/* #username-display {
+    position: absolute;
+    padding: 5px;
+    background-color: rgb(9, 37, 45);
+} */
+
+#userlist {
+    /* justify-self: center; */
+    list-style-type: none;
+    margin-top: 10vh;
+    position: absolute;
+}
+
+#userlist li {
+    border: 1px black solid;
+    font-size: 5vh;
+    padding: 1vh;
+    color: antiquewhite;
+}
+
+#startbattle {
+    position: absolute;
+    display: flex;
+    width: 20vw;
+    height: 15vh;
+    right: 0;
+    background-color: rgb(9, 37, 45);
+    
+
+}
+
+#start {
+    padding: 2rem;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    align-self: flex-end;
+    text-align: center;
+    font-size: 3vh;
+    background-color: antiquewhite;
+}
+
+#back {
+    padding: 2rem;
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    align-self: flex-end;
+    text-align: center;
+    font-size: 3vh;
+    background-color: antiquewhite;
+}
+
+#getUsers {
+margin: 0 auto;
+text-align: center;
+align-self: flex-end;
+font-size: 5vh;
+width: 20%;
+padding: 1rem;
+background-color: rgb(9, 37, 45);
+color: red;
+cursor: pointer;
+}
+
+/* #userlist li {
+
+} */
+
+
+/* #arena {
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(9, 37, 45);
+
+} */
+
+/* 
+ul {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    background-color: rgb(9, 37, 45);
+}
+
+li {
+    display: block;
+    flex: 1 1 0;
+    padding: 3.5vh;
+    text-align: center;
+    cursor: pointer;
+    border: black solid 1px;
+} */
+
+.display {
+    width: 90vw;
+    height: 100%;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,2) 0%, rgba(87,8,83,0.9) 33%, rgba(4,99,119,1) 100%);
+    margin: 0 auto;
+}
+
+#displaytwo {
+    width: 90vw;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    left: 4rem;
+    top: -100vh;
+    z-index: 1000;
+    transition: all 2s ease-in-out;
+    /* justify-content: center; */
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,2) 0%, rgba(87,8,83,0.9) 33%, rgba(4,99,119,1) 100%);
+    /* margin: 0 auto; */
+}
+
+#realstart {
+    height: 5vh;
+    width: 20vh;
+    color: red;
+    /* position: absolute; */
+    background: rgb(2,0,36);
+    text-align: center;
+    cursor: pointer;
+    padding: 2rem;
+    margin: 0 auto;
+    align-self: flex-end;
+
+    font-size: 5vh;
+    padding: 1rem;
+    background-color: rgb(9, 37, 45);
+}
+
+#opponentHP {
+    height: 3vh;
+    width: 20vh;
+    position: absolute;
+    bottom: 0;
+    background: antiquewhite;
+    text-align: center;
+    padding: 2rem;
+    right: 0;
+    font-size: 4vh;
+}
+
+#playerHP {
+    height: 3vh;
+    width: 20vh;
+    position: absolute;
+    bottom: 0;
+    background: antiquewhite;
+    text-align: center;
+    padding: 2rem;
+    left: 0;
+    font-size: 4vh;
+}
+
+#stats {
+    height: 70vh;
+    width: 30vw;
+    align-self: center;
+    margin-left: 10rem;
+    text-align: center;
+    font-size: 1.5rem;
+   
+}
+
+#stats h1 {
+    margin-bottom: 5rem;
+}
+
+#opponenthead {
+    height: 15vh;
+    width: 15vh;
+  
+    position: absolute;
+    right: 14rem;
+    top: 1rem;
+}
+
+#opponenttorso {
+    height: 32vh;
+    width: 31vh;
+    position: absolute;
+    right: 10.5rem;
+    top: 7rem;
+}
+
+#opponentlegs {
+    height: 30vh;
+    width: 20vh;
+    position: absolute;
+    right: 13rem;
+    top: 21rem;
+}
+
+#opponentshoes {
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    right: 14rem;
+    top: 35rem;
+}
+
+#opponentlefthand {
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    right: 25rem;
+    top: 15rem;
+}
+
+#opponentrighthand {
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    right: 3rem;
+    top: 15rem;
+}
+
+#head {
+    height: 15vh;
+    width: 15vh;
+  
+    position: absolute;
+    left: 14rem;
+    top: 1rem;
+}
+
+#torso {
+    height: 32vh;
+    width: 31vh;
+    position: absolute;
+    left: 10.5rem;
+    top: 7rem;
+}
+
+#legs {
+    height: 30vh;
+    width: 20vh;
+    position: absolute;
+    left: 13rem;
+    top: 21rem;
+}
+
+#shoes {
+    height: 15vh;
+    width: 15vh;
+   
+    position: absolute;
+    left: 14rem;
+    top: 35rem;
+}
+
+#lefthand {
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    left: 25rem;
+    top: 15rem;
+}
+
+#righthand {
+    height: 15vh;
+    width: 15vh;
+    position: absolute;
+    left: 3rem;
+    top: 15rem;
+}
+
+/* Animations */
+
+@keyframes hitanimation {
+   
+    from {
+        top: 30vh;
+        font-size: 7vh;
+        opacity: 1;
+    }
+    to {
+        top: 14vh;
+        font-size: 10vh;
+        opacity: 1;
+    }
+}
